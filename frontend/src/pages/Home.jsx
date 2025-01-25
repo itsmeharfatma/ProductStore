@@ -13,20 +13,33 @@ const Home = () => {
   console.log("Products", products);
 
   return (
-    <div className="container mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-16 gap-y-8 items-center justify-items-center">
+    <div>
       {products.length > 0 ? (
-        <>
+        <div className="container mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-16 gap-y-8 items-center justify-items-center">
           {products.map((product) => (
             <ProductCard key={product._id} product={product} />
           ))}
-        </>
+        </div>
       ) : (
-        <>
-          <h3 className="text-gray-100">No Products Found..!</h3>
-          <Link to={"/create"} className="hover:underline">
-            Create New Product
-          </Link>
-        </>
+        <div className="flex flex-col items-center justify-center gap-10 mt-24">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">
+              No Products Found..!
+            </h3>
+            <Link
+              to={"/create"}
+              className="text-2xl font-semibold text-gray-900 hover:text-blue-600 dark:text-gray-100 dark:hover:text-gray-400 hover:underline"
+            >
+              Create New Product
+              <i class="fas fa-arrow-up-right-from-square fa-2xs ml-2"></i>
+            </Link>
+          </div>
+          <img
+            src="/product-not-found.png"
+            alt="No Products Found"
+            className="h-60 md:h-96"
+          />
+        </div>
       )}
     </div>
   );

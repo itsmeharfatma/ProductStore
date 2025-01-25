@@ -13,7 +13,7 @@ const UpdateModal = ({ isOpen, onClose, product }) => {
   return (
     isOpen && (
       <div className="fixed inset-0 w-full min-h-screen flex items-center justify-center bg-black bg-opacity-70">
-        <div className="bg-[#1e2227] rounded-2xl px-6 pt-6 pb-5 w-[70%] lg:w-[50%] shadow-lg">
+        <div className="bg-[#1e2227] rounded-2xl px-6 pt-6 pb-5 w-[70%] lg:w-[50%] shadow-lg text-gray-100">
           <h2 className="text-center font-bold text-3xl">Update Product</h2>
           <form className="flex flex-col gap-6 mt-6">
             <div className="flex flex-col gap-1.5">

@@ -31,8 +31,10 @@ const Create = () => {
 
   return (
     <div className="mx-auto mt-24 w-full max-w-2xl p-10 shadow-xl rounded-xl border border-gray-500">
-      <h2 className="text-center font-bold text-3xl">Create New Product</h2>
-      <form className="flex flex-col gap-6 mt-6">
+      <h2 className="text-center font-bold text-3xl text-gray-900 dark:text-gray-100">
+        Create New Product
+      </h2>
+      <form className="flex flex-col gap-6 mt-6 text-gray-900 dark:text-gray-100">
         <div className="flex flex-col gap-1.5">
           <label className="font-medium">Product Name</label>
           <input
@@ -40,7 +42,7 @@ const Create = () => {
             onChange={nameHandler}
             type="text"
             name="name"
-            className="py-1 px-3 rounded-md bg-gray-700 placeholder:text-gray-300"
+            className="py-1 px-3 rounded-md bg-slate-200 dark:bg-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-300"
             placeholder="Headphone"
           />
         </div>
@@ -50,7 +52,7 @@ const Create = () => {
             value={newProduct.price}
             onChange={priceHandler}
             name="price"
-            className="py-1 px-3 rounded-md bg-gray-700 placeholder:text-gray-300"
+            className="py-1 px-3 rounded-md bg-slate-200 dark:bg-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-300"
             placeholder="₹99.00"
           />
         </div>
@@ -60,7 +62,7 @@ const Create = () => {
             value={newProduct.image}
             onChange={imgHandler}
             name="image"
-            className="py-1 px-3 rounded-md bg-gray-700 placeholder:text-gray-300"
+            className="py-1 px-3 rounded-md bg-slate-200 dark:bg-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-300"
             placeholder="https://example.com"
           />
         </div>
@@ -68,7 +70,7 @@ const Create = () => {
           <button
             type="submit"
             onClick={addProductHandler}
-            className="w-fit py-1 px-10 rounded-md bg-white text-gray-900 font-semibold"
+            className="w-fit py-1 px-10 rounded-md font-semibold bg-gray-200 text-gray-900 hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-500 dark:text-gray-100"
           >
             Add Product
           </button>
